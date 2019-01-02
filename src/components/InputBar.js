@@ -2,21 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 
+const idGenerator = () => {
+  let id = '', random, i;
+  for (i = 0; i < 8; i++) {
+    random = Math.random() * 16 | 0;
+    id += random.toString(16);
+  }
+  return id;
+}
+
 class InputBar extends React.Component {
   state = { text: '' }
 
-  idGenerator = () => {
-    let id = '', random, i;
-    for (i = 0; i < 8; i++) {
-      random = Math.random() * 16 | 0;
-      id += random.toString(16);
-    }
-    return id;
-  }
-
   onTodoSubmit = (e) => {
     e.preventDefault();
-    this.props.addTodo(this.state.text, this.idGenerator());
+    this.props.addTodo(this.state.text, idGenerator());
   }
 
   render() {
