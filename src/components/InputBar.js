@@ -20,7 +20,6 @@ class InputBar extends React.Component {
   }
 
   render() {
-    console.log(this.props.todos);
     return (
       <div className="ui segment">
         <form className="ui form" onSubmit={this.onTodoSubmit}>

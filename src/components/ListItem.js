@@ -6,7 +6,7 @@ class ListItem extends React.Component {
   render() {
     const { todo, deleteTodo } = this.props;
     return (
-      <div className="item" key={todo.id}>
+      <div className="item">
         <div className="right floated content">
           <button className="ui button primary" onClick={() => deleteTodo(todo.id)}>
             Delete
