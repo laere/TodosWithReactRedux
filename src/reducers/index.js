@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-
 // Reducers
 const todoListReducer = (todoList = [], action) => {
   if (action.type === "ADD_TODO") {
@@ -9,7 +8,6 @@ const todoListReducer = (todoList = [], action) => {
   }
   return todoList;
 };
-
 
 export default combineReducers({
   todos: todoListReducer

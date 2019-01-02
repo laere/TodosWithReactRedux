@@ -2,7 +2,6 @@ import React from 'react';
 import InputBar from './InputBar';
 import TodoList from './TodoList';
 
-
 class App extends React.Component {
 
   render() {
@@ -14,7 +13,5 @@ class App extends React.Component {
     );
   }
 }
-
-
 
 export default App;

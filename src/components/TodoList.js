@@ -3,9 +3,8 @@ import ListItem from './ListItem';
 import { connect } from 'react-redux';
 
 const TodoList = (props) => {
-  console.log('List', props.todos);
-  const renderedList = props.todos.map((todo, index) => {
-    return <ListItem todo={todo} index={index} />
+  const renderedList = props.todos.map((todo) => {
+    return <ListItem todo={todo} />
   });
   return <div>{renderedList}</div>
 }

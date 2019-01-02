@@ -6,12 +6,12 @@ class InputBar extends React.Component {
   state = { text: '' }
 
   idGenerator = () => {
-    let uuid = '', random, i;
+    let id = '', random, i;
     for (i = 0; i < 8; i++) {
       random = Math.random() * 16 | 0;
-      uuid += random.toString(16);
+      id += random.toString(16);
     }
-    return uuid;
+    return id;
   }
 
   onTodoSubmit = (e) => {

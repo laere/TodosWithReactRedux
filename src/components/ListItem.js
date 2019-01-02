@@ -4,15 +4,16 @@ import { deleteTodo } from '../actions';
 
 class ListItem extends React.Component {
   render() {
+    const { todo, deleteTodo } = this.props;
     return (
-      <div className="item" key={this.props.index}>
+      <div className="item" key={todo.id}>
         <div className="right floated content">
-          <button className="ui button primary" onClick={() => this.props.deleteTodo(this.props.todo.id)}>
+          <button className="ui button primary" onClick={() => deleteTodo(todo.id)}>
             Delete
           </button>
         </div>
         <div className="content">
-          {this.props.todo.text}
+          {todo.text}
         </div>
       </div>
     );
