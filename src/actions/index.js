@@ -20,12 +20,12 @@ export const fetchTodos = () => async dispatch => {
   });
 }
 
-export const fetchTodo = id => async dispatch => {
-  const response = todos.get(`/todos/${id}`);
+export const fetchTodo = (id) => async dispatch => {
+  const response = await todos.get(`/todos/${id}`);
 
   dispatch({
     type: FETCH_TODO,
-    payload: id
+    payload: response.data
   });
 }
 
